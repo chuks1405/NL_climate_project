@@ -2,7 +2,6 @@
 
 amt2020
 
-
 #preliminary visualization and analysis
 ppt2020 <- ggplot(data=amt2020, aes(x=DATE , y=PPT_AMT))+
   geom_line(lwd=0.3,colour ="darkblue")+
@@ -134,8 +133,6 @@ p <- p + geom_line(aes(y=cumperc_2020*0.18), colour  = "red")+
 p <- p + scale_y_continuous("Frequency", sec.axis = sec_axis(~./0.18, name = "Cumulative Percentage"))
 p
 
-
-
 #aesthetics for the cumulative percentage graph
 k20 <- p +theme_bw()+ theme(
   axis.title.y.left=element_text(color="black", size=10),
@@ -148,21 +145,11 @@ k20 <- p +theme_bw()+ theme(
 
 k20
 
-
-
-#####combine both graphs + insertation
+#combine both graphs + insertation
 fig20<- h20a +
   inset_element(k20, left = 0.001, bottom = 0.50, right = 0.5, top = 0.99)
 
 fig20
 
-
 ggsave("C:\\Users\\chuka\\OneDrive\\Desktop\\demo2020.jpeg",
        width = 32, height = 22, dpi = 500, units = "cm", device='jpeg')
-
-
-
-
-#figure <- ggarrange(h20a, k20,
-ncol = 2, nrow = 2)
-#figure
