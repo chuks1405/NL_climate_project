@@ -97,7 +97,6 @@ h20a <- h20 +
   xlab("Time (days)") + 
   ylab("Daily Precipitation Amount (mm)")+theme_bw()+
   ylim(c(0,300))+
-  #ggtitle("Movie Budget Distribution")+
   theme(axis.title.x = element_text(colour="black", size=10),
         axis.title.y = element_text(colour="black", size=10),
         axis.text.x=element_text(size=10, colour="black"),
